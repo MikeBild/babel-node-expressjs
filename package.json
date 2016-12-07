@@ -1,7 +1,7 @@
 {
   "name": "babel-node-expressjs",
   "version": "1.0.0",
-  "description": "A simple ExpressJS App written in ECMA Script.",
+  "description": "A simple ExpressJS App written with ECMA Script.",
   "main": "server.js",
   "bin": "bin/demo-cli",
   "scripts": {
