@@ -1,0 +1,36 @@
+{
+  "name": "babel-node-expressjs",
+  "version": "1.0.0",
+  "description": "A simple ExpressJS App written in ECMA Script.",
+  "main": "server.js",
+  "bin": "bin/demo-cli",
+  "scripts": {
+    "start": "SERVER_PORT=3000 nodemon src/index.js --exec babel-node",
+    "build": "babel -o server.js ./src/index.js",
+    "serve": "SERVER_PORT=3000 bin/demo-cli",
+    "test": "npm run build && mocha --require babel-core/register"
+  },
+  "author": "mike.bild@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "6.10.1",
+    "babel-core": "6.10.4",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-stage-0": "6.16.0",
+    "isomorphic-fetch": "^2.2.1",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "whatwg-fetch": "^2.0.1"
+  }
+}

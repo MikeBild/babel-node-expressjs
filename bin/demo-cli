@@ -1,0 +1,6 @@
+#!/bin/env node
+const server = require('../server.js')
+
+server
+	.start({port: process.env.SERVER_PORT})
+	.then(x => console.log(`Server listen on ${x.server.address().port}`))
