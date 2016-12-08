@@ -5,7 +5,7 @@
   "main": "server.js",
   "bin": "bin/demo-cli",
   "scripts": {
-    "start": "SERVER_PORT=3000 nodemon src/index.js --exec babel-node",
+    "start": "SERVER_PORT=3000 nodemon --watch src bin/demo-cli --exec babel-node",
     "build": "babel -o server.js ./src/index.js",
     "serve": "SERVER_PORT=3000 bin/demo-cli",
     "test": "npm run build && mocha --require babel-core/register"
